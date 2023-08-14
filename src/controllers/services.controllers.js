@@ -32,10 +32,9 @@ export async function getServices(req, res){
 export async function deleteService(req, res){
 
   const { id } = req.params;
-  const { userId } = res.locals.session;
 
   try {   
-    await deleteDB(id, userId);
+    await deleteDB(id);
     
     return res.sendStatus(200);
   }

@@ -12,7 +12,7 @@ export function getServiceDB() {
 }
 
 
-export function deleteDB(id, userId){
+export function deleteDB(id){
   return db.query(`DELETE FROM services WHERE id=$1, "userId"=$2`,
-  [id, userId]);
+  [id]);
 }
